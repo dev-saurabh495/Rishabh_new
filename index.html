@@ -1,460 +1,980 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rishabh Shukla — Public Worker &amp; Thinker</title>
-<meta name="description" content="Rishabh Shukla — public worker, thinker, and youth leader from Shravasti. Leader of Team 0001, working in education, health, and community development.">
+  <head>
+    <!-- =========================================
+         BASIC DOCUMENT META
+    ========================================== -->
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Lenis smooth scroll CSS -->
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.3/dist/lenis.css">
+    <meta name="theme-color" content="#0D1B2A" />
 
-<!-- Stylesheet -->
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <meta name="color-scheme" content="dark" />
 
-<!-- Scroll progress bar -->
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
 
-<!-- Custom cursor (desktop only, injected/controlled in JS) -->
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar" id="navbar">
-  <div class="navbar-inner">
-    <a href="#home" class="brand" data-lenis-prevent-outside>
-      <img src="images/team0001.png"  alt="">
-      <span class="brand-name">Rishabh Shukla</span>
-    </a>
+    <!-- =========================================
+         PRIMARY SEO
+    ========================================== -->
 
-    <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="#home" class="nav-link active" data-nav>Home</a>
-      <a href="#about" class="nav-link" data-nav>About</a>
-      <a href="#journey" class="nav-link" data-nav>Journey</a>
-      <a href="#impact" class="nav-link" data-nav>Impact</a>
-      <a href="#vision" class="nav-link" data-nav>Vision</a>
-      <a href="#team0001" class="nav-link" data-nav>Team 0001</a>
-      <a href="#gallery" class="nav-link" data-nav>Gallery</a>
-      <a href="#contact" class="nav-link nav-cta magnetic" data-nav>Contact</a>
-    </nav>
+    <title>Rishabh Shukla — Public Worker, Thinker & Youth Leader</title>
 
-    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span><span></span><span></span>
+    <meta
+      name="description"
+      content="Official website of Rishabh Shukla, a public worker, thinker and youth leader from Shravasti, Uttar Pradesh. Explore his journey, social impact, vision and Team 0001."
+    />
+
+    <meta name="author" content="Rishabh Shukla" />
+
+    <meta
+      name="keywords"
+      content="Rishabh Shukla, Rishabh Shukla Shravasti, public worker Shravasti, youth leader Shravasti, Team 0001, social work Shravasti, youth empowerment Uttar Pradesh"
+    />
+
+    <link rel="canonical" href="https://rishabh0001.vercel.app/" />
+    <link rel="icon" href="images/team0001.png" type="image/x-icon" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/team0001.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/team0001.png"
+    />
+
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://rishabh0001.vercel.app/" />
+
+    <meta
+      property="og:title"
+      content="Rishabh Shukla — Public Worker, Thinker & Youth Leader"
+    />
+
+    <meta
+      property="og:description"
+      content="Official website of Rishabh Shukla — public worker, thinker and youth leader from Shravasti, Uttar Pradesh."
+    />
+
+    <meta
+      property="og:image"
+      content="https://rishabh0001.vercel.app/images/rishabh_1.jpg"
+    />
+
+    <meta property="og:image:width" content="1200" />
+
+    <meta property="og:image:height" content="630" />
+
+    <meta
+      property="og:image:alt"
+      content="Rishabh Shukla — Public Worker and Thinker"
+    />
+
+    <meta property="og:site_name" content="Rishabh Shukla" />
+
+    <meta property="og:locale" content="en_IN" />
+
+   
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Rishabh Shukla — Public Worker, Thinker & Youth Leader"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Official website of Rishabh Shukla — public worker, thinker and youth leader from Shravasti, Uttar Pradesh."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://rishabh0001.vercel.app/assets/rishabh-shukla-og.jpg"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="Rishabh Shukla — Public Worker and Thinker"
+    />
+
+    <!-- =========================================
+         GOOGLE / SEARCH ENGINE VERIFICATION
+    ========================================== -->
+
+    <!-- Add your actual Search Console verification value -->
+    <!--
+    <meta
+        name="google-site-verification"
+        content="YOUR_GOOGLE_VERIFICATION_CODE"
+    >
+    -->
+
+    <!-- =========================================
+         PERFORMANCE
+    ========================================== -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Lenis -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.3/dist/lenis.css"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- =========================================
+         PERSON + WEBSITE STRUCTURED DATA
+    ========================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://rishabh0001.vercel.app/#profile",
+            "url": "https://rishabh0001.vercel.app/",
+            "name": "Rishabh Shukla — Public Worker, Thinker & Youth Leader",
+            "description": "Official profile of Rishabh Shukla, public worker, thinker and youth leader from Shravasti, Uttar Pradesh.",
+            "mainEntity": {
+              "@id": "https://rishabh0001.vercel.app/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://rishabh0001.vercel.app/#person",
+            "name": "Rishabh Shukla",
+            "url": "https://rishabh0001.vercel.app/",
+            "jobTitle": ["Public Worker", "Thinker", "Youth Leader"],
+            "description": "Public worker, thinker and youth leader from Shravasti, Uttar Pradesh.",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://rishabh0001.vercel.app/assets/rishabh-shukla-og.jpg"
+            },
+            "worksFor": {
+              "@type": "Organization",
+              "@id": "https://rishabh0001.vercel.app/#team0001",
+              "name": "Team 0001",
+              "url": "https://rishabh0001.vercel.app/"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Shravasti",
+              "addressRegion": "Uttar Pradesh",
+              "addressCountry": "IN"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://rishabh0001.vercel.app/#team0001",
+            "name": "Team 0001",
+            "url": "https://rishabh0001.vercel.app/",
+            "description": "A community and movement led by Rishabh Shukla focused on youth empowerment and positive community impact."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rishabh0001.vercel.app/#website",
+            "url": "https://rishabh0001.vercel.app/",
+            "name": "Rishabh Shukla",
+            "description": "Official website of Rishabh Shukla.",
+            "publisher": {
+              "@id": "https://rishabh0001.vercel.app/#person"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Custom cursor (desktop only, injected/controlled in JS) -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="#home" class="brand" data-lenis-prevent-outside>
+          <img src="images/team0001.png" alt="" />
+          <span class="brand-name">Rishabh Shukla</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Primary">
+          <a href="#home" class="nav-link active" data-nav>Home</a>
+          <a href="#about" class="nav-link" data-nav>About</a>
+          <a href="#journey" class="nav-link" data-nav>Journey</a>
+          <a href="#impact" class="nav-link" data-nav>Impact</a>
+          <a href="#vision" class="nav-link" data-nav>Vision</a>
+          <a href="#team0001" class="nav-link" data-nav>Team 0001</a>
+          <a href="#gallery" class="nav-link" data-nav>Gallery</a>
+          <a href="#contact" class="nav-link nav-cta magnetic" data-nav
+            >Contact</a
+          >
+        </nav>
+
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Mobile primary">
+        <a href="#home" data-nav>Home</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#journey" data-nav>Journey</a>
+        <a href="#impact" data-nav>Impact</a>
+        <a href="#vision" data-nav>Vision</a>
+        <a href="#team0001" data-nav>Team 0001</a>
+        <a href="#gallery" data-nav>Gallery</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+    </div>
+
+    <main id="smooth-wrapper">
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="glow glow-1" data-parallax="0.15"></div>
+          <div class="glow glow-2" data-parallax="0.3"></div>
+          <div class="particles" id="particles"></div>
+        </div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" data-hero-item>Public Worker &bull; Thinker</p>
+            <h1 class="hero-heading">
+              <span class="line" data-hero-line>Rishabh</span>
+              <span class="line gold-text" data-hero-line>Shukla</span>
+            </h1>
+            <p class="hero-sub" data-hero-item>
+              Serving people. Empowering youth. Building stronger communities.
+            </p>
+            <p class="hero-tag" data-hero-item>
+              Leader, Team 0001 — a youth movement rooted in Shravasti.
+            </p>
+
+            <div class="hero-ctas" data-hero-item>
+              <a href="#journey" class="btn btn-gold magnetic" data-nav
+                >Explore My Journey</a
+              >
+              <a href="#contact" class="btn btn-ghost magnetic" data-nav
+                >Connect With Me</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-visual" data-hero-portrait>
+            <div class="portrait-frame glass" data-parallax="0.08">
+              <img
+                src="https://rishabh0001.vercel.app/images/rishabh_1.jpg"
+                alt="Portrait of Rishabh Shukla"
+                width="480"
+                height="600"
+              />
+              <div class="portrait-shine" aria-hidden="true"></div>
+            </div>
+            <span class="team-chip glass"
+              >Leader &mdash; <strong>Team 0001</strong></span
+            >
+            <span class="deco-ring" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <button
+          class="scroll-cue"
+          id="scrollCue"
+          aria-label="Scroll to About section"
+        >
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section class="about" id="about">
+        <div class="container about-grid">
+          <div class="about-visual reveal" data-scale-reveal>
+            <img
+              src="https://rishabh0001.vercel.app/images/rishabh_2.jpg"
+              alt="Rishabh Shukla"
+              loading="lazy"
+            />
+            <div class="glass badge-card">
+              <span
+                ><i class="fa-solid fa-hand-holding-heart"></i> Public
+                Worker</span
+              >
+              <span><i class="fa-solid fa-lightbulb"></i> Thinker</span>
+              <span><i class="fa-solid fa-people-group"></i> Youth Leader</span>
+            </div>
+          </div>
+
+          <div class="about-copy reveal">
+            <p class="eyebrow">Who is Rishabh Shukla?</p>
+            <h2>Leadership begins with service.</h2>
+            <p>
+              I am Rishabh Shukla, a public worker and thinker from
+              <strong>Shravasti</strong>. I completed my 12th at SKV Inter
+              College, and I believe leadership is, above all, service.
+            </p>
+            <p>
+              As leader of <strong>Team 0001</strong>, my mission is to inspire
+              and support communities &mdash; building trust one person, one
+              initiative at a time.
+            </p>
+            <ul class="check-list">
+              <li>
+                <i class="fa-solid fa-check"></i>Passionate about social work
+              </li>
+              <li><i class="fa-solid fa-check"></i>Strong leadership skills</li>
+              <li>
+                <i class="fa-solid fa-check"></i>Dedicated to youth empowerment
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-gold magnetic" data-nav
+              >Connect</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= IMPACT / STATS ================= -->
+      <section class="impact" id="impact">
+        <div class="container">
+          <div class="impact-grid">
+            <div class="glass stat-card reveal">
+              <div class="stat-num"><span data-count-to="10">0</span>+</div>
+              <p class="stat-label">Health Camps Organized</p>
+            </div>
+            <div class="glass stat-card reveal">
+              <div class="stat-num"><span data-count-to="1000">0</span>+</div>
+              <p class="stat-label">Trees Planted</p>
+            </div>
+            <div class="glass stat-card reveal">
+              <div class="stat-num">
+                <span data-count-to="2023" data-no-plus>0</span>
+              </div>
+              <p class="stat-label">Best Youth Leader Recognition</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= JOURNEY / TIMELINE ================= -->
+      <section class="journey" id="journey">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">My Journey</p>
+            <h2>The path from student to public leader.</h2>
+          </div>
+
+          <div class="timeline" id="timeline">
+            <div class="timeline-item reveal" data-side="left">
+              <div class="glass timeline-card">
+                <span class="t-tag">Education</span>
+                <h3>Foundations at SKV Inter College</h3>
+                <p>
+                  Completed schooling in Shravasti &mdash; 75% in Class 10th,
+                  71% in Class 12th &mdash; building a foundation in science,
+                  mathematics, and early leadership habits.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal" data-side="right">
+              <div class="glass timeline-card">
+                <span class="t-tag">Leadership</span>
+                <h3>Founding Team 0001</h3>
+                <p>
+                  Founded Team 0001 to inspire young minds, build leadership
+                  skills, and encourage teamwork among the youth of Shravasti.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal" data-side="left">
+              <div class="glass timeline-card">
+                <span class="t-tag">Social Work</span>
+                <h3>Health, Environment &amp; Education Drives</h3>
+                <p>
+                  Organized 10+ free health camps for rural families, led
+                  plantation drives that put 1000+ trees in the ground, and
+                  mentored underprivileged students.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal" data-side="right">
+              <div class="glass timeline-card">
+                <span class="t-tag">Recognition</span>
+                <h3>Best Youth Leader, 2023</h3>
+                <p>
+                  Recognized for outstanding leadership, inspiring youth, and
+                  continued social service across the Shravasti community.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal" data-side="left">
+              <div class="glass timeline-card">
+                <span class="t-tag">Ongoing</span>
+                <h3>B.Sc. &amp; Continued Community Work</h3>
+                <p>
+                  Currently pursuing a Bachelor of Science, while continuing to
+                  lead Team 0001's community welfare and awareness initiatives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= VISION ================= -->
+      <section class="vision" id="vision">
+        <div class="container vision-grid">
+          <div class="vision-visual reveal" data-scale-reveal>
+            <img
+              src="https://rishabh0001.vercel.app/images/rishabh_3.jpg"
+              alt="Rishabh's vision for community change"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="reveal">
+            <p class="eyebrow">My Vision</p>
+            <h2>Building change with purpose.</h2>
+            <p class="vision-intro">
+              To empower people by leading with compassion, building trust, and
+              driving social change &mdash; uniting youth and communities toward
+              education, health, and environmental well-being.
+            </p>
+
+            <div class="pillar-grid">
+              <div class="glass pillar-card">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h4>Compassion</h4>
+              </div>
+              <div class="glass pillar-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h4>Trust</h4>
+              </div>
+              <div class="glass pillar-card">
+                <i class="fa-solid fa-people-group"></i>
+                <h4>Youth Empowerment</h4>
+              </div>
+              <div class="glass pillar-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h4>Education</h4>
+              </div>
+              <div class="glass pillar-card">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h4>Health</h4>
+              </div>
+              <div class="glass pillar-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h4>Environment</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TEAM 0001 ================= -->
+      <section class="team0001" id="team0001">
+        <div class="container">
+          <div class="team-flow reveal">
+            <span>Rishabh's Leadership</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span class="gold-text">Team 0001</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Community</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Impact</span>
+          </div>
+
+          <div class="team-body">
+            <div class="team-emblem glass reveal">
+              <img
+                src="./images/team0001.png"
+                style="border-radius: 50%"
+                alt=""
+              />
+            </div>
+            <div class="reveal">
+              <p class="eyebrow">Team 0001</p>
+              <h2>
+                A community built around unity, service and positive impact.
+              </h2>
+              <p>
+                Team 0001 is the youth community Rishabh founded and leads
+                &mdash; a movement built to inspire young minds, build
+                leadership skills, and encourage teamwork across Shravasti.
+              </p>
+              <a
+                href="https://wa.me/919580526988"
+                class="btn btn-gold magnetic"
+                target="_blank"
+                rel="noopener"
+                >Explore Team 0001</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ACHIEVEMENTS ================= -->
+      <section class="achievements" id="achievements">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Impact &amp; Achievements</p>
+            <h2>Here is what Rishabh has actually done.</h2>
+          </div>
+
+          <div class="ach-grid">
+            <div class="glass ach-card reveal">
+              <i class="fa-solid fa-award"></i>
+              <h3>Best Youth Leader 2023</h3>
+              <p>
+                Recognized for outstanding leadership and social service in
+                Shravasti.
+              </p>
+            </div>
+            <div class="glass ach-card reveal">
+              <i class="fa-solid fa-briefcase-medical"></i>
+              <h3>10+ Health Camps</h3>
+              <p>Free medical support and awareness for rural families.</p>
+            </div>
+            <div class="glass ach-card reveal">
+              <i class="fa-solid fa-tree"></i>
+              <h3>1000+ Trees Planted</h3>
+              <p>Environmental drives promoting sustainability in Shravasti.</p>
+            </div>
+            <div class="glass ach-card reveal">
+              <i class="fa-solid fa-people-group"></i>
+              <h3>Youth Empowerment</h3>
+              <p>Founded Team 0001 to build leadership and teamwork.</p>
+            </div>
+            <div class="glass ach-card reveal">
+              <i class="fa-solid fa-book-open"></i>
+              <h3>Education Drives</h3>
+              <p>Mentorship and resources for underprivileged students.</p>
+            </div>
+            <div class="glass ach-card reveal">
+              <i class="fa-solid fa-hands-holding-circle"></i>
+              <h3>Community Welfare</h3>
+              <p>
+                Awareness campaigns for cleanliness, health and rural
+                development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION ================= -->
+      <section class="education" id="education">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Education</p>
+            <h2>Part of the journey, not the whole story.</h2>
+          </div>
+
+          <div class="edu-list">
+            <div class="edu-item reveal">
+              <img
+                src="https://rishabh0001.vercel.app/images/skv1.jpeg"
+                alt="Class 10th"
+                loading="lazy"
+              />
+              <div class="edu-info">
+                <h4>Class 10th</h4>
+                <span>High School</span>
+              </div>
+              <div class="edu-stat">75%</div>
+            </div>
+            <div class="edu-item reveal">
+              <img
+                src="https://rishabh0001.vercel.app/images/skv2.jpeg"
+                alt="Class 12th"
+                loading="lazy"
+              />
+              <div class="edu-info">
+                <h4>Class 12th</h4>
+                <span>SKV Inter College, Shravasti</span>
+              </div>
+              <div class="edu-stat">71%</div>
+            </div>
+            <div class="edu-item reveal">
+              <img
+                src="https://rishabh0001.vercel.app/images/r3.jpg"
+                alt="B.Sc."
+                loading="lazy"
+              />
+              <div class="edu-info">
+                <h4>Bachelor of Science (B.Sc.)</h4>
+                <span>Currently pursuing</span>
+              </div>
+              <div class="edu-stat">Ongoing</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GALLERY ================= -->
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Gallery</p>
+            <h2>Moments from the journey.</h2>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid">
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/rishabh_1.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/rishabh_1.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/rishabh_2.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/rishabh_2.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/r5.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/r5.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/r4.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/r4.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/r6.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/r6.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/r7.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/r7.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/r3.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/r3.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item reveal"
+              data-img="https://rishabh0001.vercel.app/images/r8.jpg"
+            >
+              <img
+                src="https://rishabh0001.vercel.app/images/r8.jpg"
+                alt="Gallery photo"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Enlarged photo"
+        aria-hidden="true"
+      >
+        <button
+          class="lightbox-close"
+          id="lightboxClose"
+          aria-label="Close photo"
+        >
+          &times;
+        </button>
+        <img id="lightboxImg" src="" alt="" />
+      </div>
+
+      <!-- ================= TESTIMONIALS ================= -->
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">What People Say</p>
+            <h2>Words from those who've worked with Rishabh.</h2>
+          </div>
+
+          <div class="test-grid">
+            <div class="glass test-card reveal">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>
+                "Rishabh's dedication towards helping society and his leadership
+                spirit truly motivates the youth of our community."
+              </p>
+              <div class="test-person">
+                <img
+                  src="https://rishabh0001.vercel.app/images/pandey.jpeg"
+                  alt="Saurabh Pandey"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Saurabh Pandey</strong
+                  ><span>Software Developer, Lucknow</span>
+                </div>
+              </div>
+            </div>
+            <div class="glass test-card reveal">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>
+                "He has an incredible ability to unite people and drive
+                meaningful change. His positive attitude is infectious."
+              </p>
+              <div class="test-person">
+                <img
+                  src="https://rishabh0001.vercel.app/images/AbhisheksSi.jpeg"
+                  alt="Abhishek Singh"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Abhishek Singh</strong><span>Student, Chichadi</span>
+                </div>
+              </div>
+            </div>
+            <div class="glass test-card reveal">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>
+                "Rishabh is not only a leader but also a friend who listens,
+                understands, and always supports others."
+              </p>
+              <div class="test-person">
+                <div class="test-avatar-fallback">R</div>
+                <div>
+                  <strong>Rahul Kumar</strong><span>Student, Doobkalan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="section-head center reveal">
+            <p class="eyebrow">Get In Touch</p>
+            <h2>Let's build a stronger community together.</h2>
+          </div>
+
+          <div class="contact-grid">
+            <div class="glass contact-card reveal">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h3>WhatsApp</h3>
+              <p>Fastest way to reach Rishabh directly.</p>
+              <a
+                href="https://wa.me/919580526988"
+                class="btn btn-ghost magnetic"
+                target="_blank"
+                rel="noopener"
+                >Message on WhatsApp</a
+              >
+            </div>
+
+            <form
+              class="glass contact-card contact-form reveal"
+              id="contactForm"
+            >
+              <h3>Send a Message</h3>
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold magnetic">
+                Send Message
+              </button>
+              <p class="form-msg" id="formMsg" role="status"></p>
+            </form>
+
+            <div class="glass contact-card reveal">
+              <i class="fa-solid fa-share-nodes"></i>
+              <h3>Follow Along</h3>
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/share/1HQsQFgXZf/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/alone___boy___rishabh0001/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <span class="brand-name footer-brand">Rishabh Shukla</span>
+          <p class="footer-tag">
+            Public Worker &bull; Thinker &bull; Youth Leader
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#home" data-nav>Home</a>
+          <a href="#about" data-nav>About</a>
+          <a href="#journey" data-nav>Journey</a>
+          <a href="#team0001" data-nav>Team 0001</a>
+          <a href="#contact" data-nav>Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a
+            href="https://www.facebook.com/share/1HQsQFgXZf/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/alone___boy___rishabh0001/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://wa.me/919580526988"
+            target="_blank"
+            rel="noopener"
+            aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>
+          Made with &#10084; by
+          <a
+            href="https://www.linkedin.com/in/saurabh-pandey-179695296"
+            target="_blank"
+            rel="noopener"
+            >Saurabh Pandey</a
+          >. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top glass" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
     </button>
-  </div>
-</header>
 
-<!-- ================= MOBILE MENU ================= -->
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <nav aria-label="Mobile primary">
-    <a href="#home" data-nav>Home</a>
-    <a href="#about" data-nav>About</a>
-    <a href="#journey" data-nav>Journey</a>
-    <a href="#impact" data-nav>Impact</a>
-    <a href="#vision" data-nav>Vision</a>
-    <a href="#team0001" data-nav>Team 0001</a>
-    <a href="#gallery" data-nav>Gallery</a>
-    <a href="#contact" data-nav>Contact</a>
-  </nav>
-</div>
-
-<main id="smooth-wrapper">
-
-  <!-- ================= HERO ================= -->
-  <section class="hero" id="home">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="glow glow-1" data-parallax="0.15"></div>
-      <div class="glow glow-2" data-parallax="0.3"></div>
-      <div class="particles" id="particles"></div>
-    </div>
-
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow" data-hero-item>Public Worker &bull; Thinker</p>
-        <h1 class="hero-heading">
-          <span class="line" data-hero-line>Rishabh</span>
-          <span class="line gold-text" data-hero-line>Shukla</span>
-        </h1>
-        <p class="hero-sub" data-hero-item>Serving people. Empowering youth. Building stronger communities.</p>
-        <p class="hero-tag" data-hero-item>Leader, Team 0001 — a youth movement rooted in Shravasti.</p>
-
-        <div class="hero-ctas" data-hero-item>
-          <a href="#journey" class="btn btn-gold magnetic" data-nav>Explore My Journey</a>
-          <a href="#contact" class="btn btn-ghost magnetic" data-nav>Connect With Me</a>
-        </div>
-      </div>
-
-      <div class="hero-visual" data-hero-portrait>
-        <div class="portrait-frame glass" data-parallax="0.08">
-          <img src="https://rishabh0001.netlify.app/images/rishabh_1.jpg" alt="Portrait of Rishabh Shukla" width="480" height="600">
-          <div class="portrait-shine" aria-hidden="true"></div>
-        </div>
-        <span class="team-chip glass">Leader &mdash; <strong>Team 0001</strong></span>
-        <span class="deco-ring" aria-hidden="true"></span>
-      </div>
-    </div>
-
-    <button class="scroll-cue" id="scrollCue" aria-label="Scroll to About section">
-      <i class="fa-solid fa-chevron-down"></i>
-    </button>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-visual reveal" data-scale-reveal>
-        <img src="https://rishabh0001.netlify.app/images/rishabh_2.jpg" alt="Rishabh Shukla" loading="lazy">
-        <div class="glass badge-card">
-          <span><i class="fa-solid fa-hand-holding-heart"></i> Public Worker</span>
-          <span><i class="fa-solid fa-lightbulb"></i> Thinker</span>
-          <span><i class="fa-solid fa-people-group"></i> Youth Leader</span>
-        </div>
-      </div>
-
-      <div class="about-copy reveal">
-        <p class="eyebrow">Who is Rishabh Shukla?</p>
-        <h2>Leadership begins with service.</h2>
-        <p>I am Rishabh Shukla, a public worker and thinker from <strong>Shravasti</strong>. I completed my 12th at SKV Inter College, and I believe leadership is, above all, service.</p>
-        <p>As leader of <strong>Team 0001</strong>, my mission is to inspire and support communities &mdash; building trust one person, one initiative at a time.</p>
-        <ul class="check-list">
-          <li><i class="fa-solid fa-check"></i>Passionate about social work</li>
-          <li><i class="fa-solid fa-check"></i>Strong leadership skills</li>
-          <li><i class="fa-solid fa-check"></i>Dedicated to youth empowerment</li>
-        </ul>
-        <a href="#contact" class="btn btn-gold magnetic" data-nav>Connect</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= IMPACT / STATS ================= -->
-  <section class="impact" id="impact">
-    <div class="container">
-      <div class="impact-grid">
-        <div class="glass stat-card reveal">
-          <div class="stat-num"><span data-count-to="10">0</span>+</div>
-          <p class="stat-label">Health Camps Organized</p>
-        </div>
-        <div class="glass stat-card reveal">
-          <div class="stat-num"><span data-count-to="1000">0</span>+</div>
-          <p class="stat-label">Trees Planted</p>
-        </div>
-        <div class="glass stat-card reveal">
-          <div class="stat-num"><span data-count-to="2023" data-no-plus>0</span></div>
-          <p class="stat-label">Best Youth Leader Recognition</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= JOURNEY / TIMELINE ================= -->
-  <section class="journey" id="journey">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">My Journey</p>
-        <h2>The path from student to public leader.</h2>
-      </div>
-
-      <div class="timeline" id="timeline">
-        <div class="timeline-item reveal" data-side="left">
-          <div class="glass timeline-card">
-            <span class="t-tag">Education</span>
-            <h3>Foundations at SKV Inter College</h3>
-            <p>Completed schooling in Shravasti &mdash; 75% in Class 10th, 71% in Class 12th &mdash; building a foundation in science, mathematics, and early leadership habits.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal" data-side="right">
-          <div class="glass timeline-card">
-            <span class="t-tag">Leadership</span>
-            <h3>Founding Team 0001</h3>
-            <p>Founded Team 0001 to inspire young minds, build leadership skills, and encourage teamwork among the youth of Shravasti.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal" data-side="left">
-          <div class="glass timeline-card">
-            <span class="t-tag">Social Work</span>
-            <h3>Health, Environment &amp; Education Drives</h3>
-            <p>Organized 10+ free health camps for rural families, led plantation drives that put 1000+ trees in the ground, and mentored underprivileged students.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal" data-side="right">
-          <div class="glass timeline-card">
-            <span class="t-tag">Recognition</span>
-            <h3>Best Youth Leader, 2023</h3>
-            <p>Recognized for outstanding leadership, inspiring youth, and continued social service across the Shravasti community.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal" data-side="left">
-          <div class="glass timeline-card">
-            <span class="t-tag">Ongoing</span>
-            <h3>B.Sc. &amp; Continued Community Work</h3>
-            <p>Currently pursuing a Bachelor of Science, while continuing to lead Team 0001's community welfare and awareness initiatives.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= VISION ================= -->
-  <section class="vision" id="vision">
-    <div class="container vision-grid">
-      <div class="vision-visual reveal" data-scale-reveal>
-        <img src="https://rishabh0001.netlify.app/images/rishabh_3.jpg" alt="Rishabh's vision for community change" loading="lazy">
-      </div>
-
-      <div class="reveal">
-        <p class="eyebrow">My Vision</p>
-        <h2>Building change with purpose.</h2>
-        <p class="vision-intro">To empower people by leading with compassion, building trust, and driving social change &mdash; uniting youth and communities toward education, health, and environmental well-being.</p>
-
-        <div class="pillar-grid">
-          <div class="glass pillar-card"><i class="fa-solid fa-hand-holding-heart"></i><h4>Compassion</h4></div>
-          <div class="glass pillar-card"><i class="fa-solid fa-handshake"></i><h4>Trust</h4></div>
-          <div class="glass pillar-card"><i class="fa-solid fa-people-group"></i><h4>Youth Empowerment</h4></div>
-          <div class="glass pillar-card"><i class="fa-solid fa-graduation-cap"></i><h4>Education</h4></div>
-          <div class="glass pillar-card"><i class="fa-solid fa-heart-pulse"></i><h4>Health</h4></div>
-          <div class="glass pillar-card"><i class="fa-solid fa-seedling"></i><h4>Environment</h4></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= TEAM 0001 ================= -->
-  <section class="team0001" id="team0001">
-    <div class="container">
-      <div class="team-flow reveal">
-        <span>Rishabh's Leadership</span>
-        <i class="fa-solid fa-arrow-right"></i>
-        <span class="gold-text">Team 0001</span>
-        <i class="fa-solid fa-arrow-right"></i>
-        <span>Community</span>
-        <i class="fa-solid fa-arrow-right"></i>
-        <span>Impact</span>
-      </div>
-
-      <div class="team-body">
-        <div class="team-emblem glass reveal">
-          <img src="./images/team0001.png" style="border-radius:50% ;" alt="">
-        </div>
-        <div class="reveal">
-          <p class="eyebrow">Team 0001</p>
-          <h2>A community built around unity, service and positive impact.</h2>
-          <p>Team 0001 is the youth community Rishabh founded and leads &mdash; a movement built to inspire young minds, build leadership skills, and encourage teamwork across Shravasti.</p>
-          <a href="https://wa.me/919580526988" class="btn btn-gold magnetic" target="_blank" rel="noopener">Explore Team 0001</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ACHIEVEMENTS ================= -->
-  <section class="achievements" id="achievements">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Impact &amp; Achievements</p>
-        <h2>Here is what Rishabh has actually done.</h2>
-      </div>
-
-      <div class="ach-grid">
-        <div class="glass ach-card reveal"><i class="fa-solid fa-award"></i><h3>Best Youth Leader 2023</h3><p>Recognized for outstanding leadership and social service in Shravasti.</p></div>
-        <div class="glass ach-card reveal"><i class="fa-solid fa-briefcase-medical"></i><h3>10+ Health Camps</h3><p>Free medical support and awareness for rural families.</p></div>
-        <div class="glass ach-card reveal"><i class="fa-solid fa-tree"></i><h3>1000+ Trees Planted</h3><p>Environmental drives promoting sustainability in Shravasti.</p></div>
-        <div class="glass ach-card reveal"><i class="fa-solid fa-people-group"></i><h3>Youth Empowerment</h3><p>Founded Team 0001 to build leadership and teamwork.</p></div>
-        <div class="glass ach-card reveal"><i class="fa-solid fa-book-open"></i><h3>Education Drives</h3><p>Mentorship and resources for underprivileged students.</p></div>
-        <div class="glass ach-card reveal"><i class="fa-solid fa-hands-holding-circle"></i><h3>Community Welfare</h3><p>Awareness campaigns for cleanliness, health and rural development.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= EDUCATION ================= -->
-  <section class="education" id="education">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Education</p>
-        <h2>Part of the journey, not the whole story.</h2>
-      </div>
-
-      <div class="edu-list">
-        <div class="edu-item reveal">
-          <img src="https://rishabh0001.netlify.app/images/skv1.jpeg" alt="Class 10th" loading="lazy">
-          <div class="edu-info"><h4>Class 10th</h4><span>High School</span></div>
-          <div class="edu-stat">75%</div>
-        </div>
-        <div class="edu-item reveal">
-          <img src="https://rishabh0001.netlify.app/images/skv2.jpeg" alt="Class 12th" loading="lazy">
-          <div class="edu-info"><h4>Class 12th</h4><span>SKV Inter College, Shravasti</span></div>
-          <div class="edu-stat">71%</div>
-        </div>
-        <div class="edu-item reveal">
-          <img src="https://rishabh0001.netlify.app/images/r3.jpg" alt="B.Sc." loading="lazy">
-          <div class="edu-info"><h4>Bachelor of Science (B.Sc.)</h4><span>Currently pursuing</span></div>
-          <div class="edu-stat">Ongoing</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= GALLERY ================= -->
-  <section class="gallery" id="gallery">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Gallery</p>
-        <h2>Moments from the journey.</h2>
-      </div>
-
-      <div class="gallery-grid" id="galleryGrid">
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/rishabh_1.jpg"><img src="https://rishabh0001.netlify.app/images/rishabh_1.jpg" alt="Gallery photo" loading="lazy"></button>
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/rishabh_2.jpg"><img src="https://rishabh0001.netlify.app/images/rishabh_2.jpg" alt="Gallery photo" loading="lazy"></button>
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/r5.jpg"><img src="https://rishabh0001.netlify.app/images/r5.jpg" alt="Gallery photo" loading="lazy"></button>
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/r4.jpg"><img src="https://rishabh0001.netlify.app/images/r4.jpg" alt="Gallery photo" loading="lazy"></button>
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/r6.jpg"><img src="https://rishabh0001.netlify.app/images/r6.jpg" alt="Gallery photo" loading="lazy"></button>
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/r7.jpg"><img src="https://rishabh0001.netlify.app/images/r7.jpg" alt="Gallery photo" loading="lazy"></button>
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/r3.jpg"><img src="https://rishabh0001.netlify.app/images/r3.jpg" alt="Gallery photo" loading="lazy"></button>
-        <button class="g-item reveal" data-img="https://rishabh0001.netlify.app/images/r8.jpg"><img src="https://rishabh0001.netlify.app/images/r8.jpg" alt="Gallery photo" loading="lazy"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo">&times;</button>
-    <img id="lightboxImg" src="" alt="">
-  </div>
-
-  <!-- ================= TESTIMONIALS ================= -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">What People Say</p>
-        <h2>Words from those who've worked with Rishabh.</h2>
-      </div>
-
-      <div class="test-grid">
-        <div class="glass test-card reveal">
-          <i class="fa-solid fa-quote-left"></i>
-          <p>"Rishabh's dedication towards helping society and his leadership spirit truly motivates the youth of our community."</p>
-          <div class="test-person">
-            <img src="https://rishabh0001.netlify.app/images/pandey.jpeg" alt="Saurabh Pandey" loading="lazy">
-            <div><strong>Saurabh Pandey</strong><span>Software Developer, Lucknow</span></div>
-          </div>
-        </div>
-        <div class="glass test-card reveal">
-          <i class="fa-solid fa-quote-left"></i>
-          <p>"He has an incredible ability to unite people and drive meaningful change. His positive attitude is infectious."</p>
-          <div class="test-person">
-            <img src="https://rishabh0001.netlify.app/images/AbhisheksSi.jpeg" alt="Abhishek Singh" loading="lazy">
-            <div><strong>Abhishek Singh</strong><span>Student, Chichadi</span></div>
-          </div>
-        </div>
-        <div class="glass test-card reveal">
-          <i class="fa-solid fa-quote-left"></i>
-          <p>"Rishabh is not only a leader but also a friend who listens, understands, and always supports others."</p>
-          <div class="test-person">
-            <div class="test-avatar-fallback">R</div>
-            <div><strong>Rahul Kumar</strong><span>Student, Doobkalan</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-head center reveal">
-        <p class="eyebrow">Get In Touch</p>
-        <h2>Let's build a stronger community together.</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="glass contact-card reveal">
-          <i class="fa-brands fa-whatsapp"></i>
-          <h3>WhatsApp</h3>
-          <p>Fastest way to reach Rishabh directly.</p>
-          <a href="https://wa.me/919580526988" class="btn btn-ghost magnetic" target="_blank" rel="noopener">Message on WhatsApp</a>
-        </div>
-
-        <form class="glass contact-card contact-form reveal" id="contactForm">
-          <h3>Send a Message</h3>
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-gold magnetic">Send Message</button>
-          <p class="form-msg" id="formMsg" role="status"></p>
-        </form>
-
-        <div class="glass contact-card reveal">
-          <i class="fa-solid fa-share-nodes"></i>
-          <h3>Follow Along</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/share/1HQsQFgXZf/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/alone___boy___rishabh0001/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <span class="brand-name footer-brand">Rishabh Shukla</span>
-      <p class="footer-tag">Public Worker &bull; Thinker &bull; Youth Leader</p>
-    </div>
-
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="#home" data-nav>Home</a>
-      <a href="#about" data-nav>About</a>
-      <a href="#journey" data-nav>Journey</a>
-      <a href="#team0001" data-nav>Team 0001</a>
-      <a href="#contact" data-nav>Contact</a>
-    </nav>
-
-    <div class="footer-socials">
-      <a href="https://www.facebook.com/share/1HQsQFgXZf/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/alone___boy___rishabh0001/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://wa.me/919580526988" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-  </div>
-
-  <div class="container footer-bottom">
-    <p>Made with &#10084; by <a href="https://www.linkedin.com/in/saurabh-pandey-179695296" target="_blank" rel="noopener">Saurabh Pandey</a>. All rights reserved.</p>
-  </div>
-</footer>
-
-<!-- Back to top -->
-<button class="back-to-top glass" id="backToTop" aria-label="Back to top">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- ============ SCRIPTS ============ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
-<script src="js/script.js"></script>
-</body>
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
