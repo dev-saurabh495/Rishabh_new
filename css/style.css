@@ -1425,4 +1425,551 @@ body {
   outline-offset: 3px;
 }
 
-/* Ensure sufficient contrast on muted text over dark backgrounds is preserved by design tokens above */
+/* =====================================================
+   CYBER SECURITY LOADER
+===================================================== */
+
+.cyber-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(212, 175, 55, 0.08),
+      transparent 32%
+    ),
+    #050a10;
+
+  color: #fff;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+.cyber-loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+
+  background-size: 45px 45px;
+
+  mask-image: radial-gradient(circle, black 20%, transparent 80%);
+  pointer-events: none;
+}
+
+.cyber-loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+/* Hide loader */
+.cyber-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Content */
+
+.loader-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(420px, 90vw);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Status */
+
+.loader-status {
+  margin-bottom: 28px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  animation: cyberFlicker 2s infinite;
+}
+
+.status-dot {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  margin-right: 9px;
+
+  border-radius: 50%;
+
+  background: #d4af37;
+
+  box-shadow:
+    0 0 5px #d4af37,
+    0 0 15px #d4af37;
+
+  animation: statusPulse 0.8s infinite alternate;
+}
+
+/* Circle */
+
+.cyber-circle {
+  position: relative;
+
+  width: 220px;
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-svg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.loader-track {
+  fill: none;
+
+  stroke: rgba(255, 255, 255, 0.06);
+  stroke-width: 2;
+}
+
+.loader-progress {
+  fill: none;
+
+  stroke: #d4af37;
+  stroke-width: 3;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: 578;
+  stroke-dashoffset: 578;
+
+  filter: drop-shadow(0 0 5px #d4af37)
+    drop-shadow(0 0 15px rgba(212, 175, 55, 0.8));
+
+  transition: stroke-dashoffset 0.05s linear;
+}
+
+/* Outer cyber rings */
+
+.cyber-circle::before,
+.cyber-circle::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.cyber-circle::before {
+  inset: -10px;
+
+  border: 1px solid rgba(212, 175, 55, 0.15);
+
+  border-top-color: #d4af37;
+  border-bottom-color: transparent;
+
+  animation: rotateRing 3s linear infinite;
+}
+
+.cyber-circle::after {
+  inset: -20px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+
+  animation: rotateRingReverse 8s linear infinite;
+}
+
+/* Center glow */
+
+.circle-glow {
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  background: rgba(212, 175, 55, 0.04);
+
+  box-shadow:
+    inset 0 0 40px rgba(212, 175, 55, 0.06),
+    0 0 60px rgba(212, 175, 55, 0.08);
+
+  animation: circlePulse 2s ease-in-out infinite;
+}
+
+/* Percentage */
+
+.loader-percent {
+  position: relative;
+  z-index: 4;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 48px;
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
+
+  color: #fff;
+
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 25px rgba(212, 175, 55, 0.3);
+}
+
+.loader-percent small {
+  font-size: 18px;
+  color: #d4af37;
+  margin-left: 2px;
+}
+
+/* Scanning line */
+
+.loader-scan {
+  position: absolute;
+
+  width: 165px;
+  height: 2px;
+
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+
+  opacity: 0.7;
+
+  filter: blur(1px);
+
+  animation: scanCircle 2s ease-in-out infinite;
+}
+
+/* Terminal */
+
+.loader-terminal {
+  width: 100%;
+
+  margin-top: 42px;
+
+  font-family: monospace;
+  font-size: 11px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  text-align: center;
+
+  min-height: 18px;
+}
+
+.loader-terminal span {
+  color: #d4af37;
+
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+/* Decorative lines */
+
+.loader-lines {
+  display: flex;
+
+  width: 180px;
+
+  margin-top: 18px;
+
+  gap: 4px;
+}
+
+.loader-lines span {
+  height: 2px;
+  flex: 1;
+
+  background: #d4af37;
+
+  opacity: 0.15;
+
+  animation: lineBlink 1s infinite;
+}
+
+.loader-lines span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loader-lines span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Branding */
+
+.loader-brand {
+  margin-top: 25px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 10px;
+  letter-spacing: 0.4em;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.loader-brand strong {
+  color: #d4af37;
+
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Noise */
+
+.loader-noise {
+  position: absolute;
+  inset: -50%;
+
+  opacity: 0.035;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+
+  animation: noiseMove 0.2s steps(2) infinite;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   GLITCH EFFECT
+===================================================== */
+
+.cyber-loader.glitch {
+  animation: loaderGlitch 0.15s steps(2) infinite;
+}
+
+.cyber-loader.glitch .loader-content {
+  animation: contentGlitch 0.12s steps(2) infinite;
+}
+
+.cyber-loader.glitch::before {
+  background-color: rgba(212, 175, 55, 0.03);
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes rotateRing {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateRingReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes circlePulse {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes scanCircle {
+  0% {
+    transform: translateY(-75px);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+}
+
+@keyframes statusPulse {
+  from {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes cyberFlicker {
+  0%,
+  19%,
+  21%,
+  63%,
+  65%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  64% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes lineBlink {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+  }
+}
+
+@keyframes noiseMove {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(3%, -2%);
+  }
+
+  50% {
+    transform: translate(-2%, 3%);
+  }
+
+  75% {
+    transform: translate(2%, 2%);
+  }
+
+  100% {
+    transform: translate(-3%, -1%);
+  }
+}
+
+@keyframes loaderGlitch {
+  0% {
+    transform: translate(0);
+    filter: none;
+  }
+
+  25% {
+    transform: translate(-3px, 1px);
+    filter: hue-rotate(20deg);
+  }
+
+  50% {
+    transform: translate(3px, -1px);
+    filter: saturate(1.5);
+  }
+
+  75% {
+    transform: translate(-1px, -2px);
+    filter: hue-rotate(-20deg);
+  }
+
+  100% {
+    transform: translate(0);
+    filter: none;
+  }
+}
+
+@keyframes contentGlitch {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-4px);
+  }
+
+  66% {
+    transform: translateX(4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .cyber-circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .loader-percent {
+    font-size: 40px;
+  }
+
+  .loader-status {
+    font-size: 9px;
+  }
+
+  .loader-terminal {
+    font-size: 9px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-loader *,
+  .cyber-loader::before,
+  .cyber-loader::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
