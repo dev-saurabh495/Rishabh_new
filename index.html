@@ -214,6 +214,54 @@
   <body>
     <!-- Scroll progress bar -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <!-- ================= CYBER LOADER ================= -->
+    <div class="cyber-loader" id="cyberLoader">
+      <div class="loader-noise"></div>
+
+      <div class="loader-content">
+        <div class="loader-status">
+          <span class="status-dot"></span>
+          SYSTEM INITIALIZING PLEASE WAIT...
+        </div>
+
+        <div class="cyber-circle">
+          <svg class="loader-svg" viewBox="0 0 220 220">
+            <circle class="loader-track" cx="110" cy="110" r="92" />
+
+            <circle
+              class="loader-progress"
+              id="loaderProgress"
+              cx="110"
+              cy="110"
+              r="92"
+            />
+          </svg>
+
+          <div class="circle-glow"></div>
+
+          <div class="loader-percent">
+            <span id="loaderPercent">0</span><small>%</small>
+          </div>
+
+          <div class="loader-scan"></div>
+        </div>
+
+        <div class="loader-terminal">
+          <span id="loaderTerminal">> INITIALIZING CORE...</span>
+        </div>
+
+        <div class="loader-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="loader-brand">
+          <span>RISHABH SHUKLA</span>
+          <strong>0001</strong>
+        </div>
+      </div>
+    </div>
 
     <!-- Custom cursor (desktop only, injected/controlled in JS) -->
     <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
@@ -1035,6 +1083,119 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+
     <script src="js/script.js"></script>
+    <script>
+      (function () {
+        const loader = document.getElementById("cyberLoader");
+        const percentEl = document.getElementById("loaderPercent");
+        const progressEl = document.getElementById("loaderProgress");
+        const terminalEl = document.getElementById("loaderTerminal");
+
+        if (!loader || !percentEl || !progressEl) {
+          console.error("Cyber loader elements not found.");
+          return;
+        }
+
+        const radius = 92;
+        const circumference = 2 * Math.PI * radius;
+
+        progressEl.style.strokeDasharray = circumference;
+        progressEl.style.strokeDashoffset = circumference;
+
+        const messages = [
+          "> INITIALIZING CORE...",
+          "> CONNECTING TO SYSTEM...",
+          "> VERIFYING SECURITY...",
+          "> LOADING TEAM 0001...",
+          "> ENCRYPTING DATA...",
+          "> ACCESS GRANTED...",
+          "> SYSTEM READY...",
+        ];
+
+        let progress = 0;
+        let messageIndex = 0;
+
+        function updateLoader(value) {
+          percentEl.textContent = value;
+
+          const offset = circumference - (value / 100) * circumference;
+
+          progressEl.style.strokeDashoffset = offset;
+
+          const newMessageIndex = Math.min(
+            Math.floor(value / 15),
+            messages.length - 1,
+          );
+
+          if (newMessageIndex !== messageIndex && terminalEl) {
+            messageIndex = newMessageIndex;
+
+            terminalEl.textContent = messages[messageIndex];
+
+            terminalEl.style.opacity = "0";
+
+            setTimeout(function () {
+              terminalEl.style.opacity = "1";
+            }, 80);
+          }
+        }
+
+        function finishLoader() {
+          updateLoader(100);
+
+          setTimeout(function () {
+            loader.classList.add("glitch");
+          }, 100);
+
+          setTimeout(function () {
+            loader.classList.add("loaded");
+
+            document.body.classList.add("page-ready");
+
+            setTimeout(function () {
+              if (loader) {
+                loader.remove();
+              }
+            }, 900);
+          }, 700);
+        }
+
+        /*
+         * Start immediately
+         */
+        function startLoader() {
+          const timer = setInterval(function () {
+            let speed = 1;
+
+            if (progress < 25) {
+              speed = 2;
+            } else if (progress < 60) {
+              speed = Math.floor(Math.random() * 3) + 1;
+            } else if (progress < 85) {
+              speed = 2;
+            } else if (progress < 99) {
+              speed = 1;
+            }
+
+            progress += speed;
+
+            if (progress >= 100) {
+              progress = 100;
+
+              clearInterval(timer);
+
+              finishLoader();
+            } else {
+              updateLoader(progress);
+            }
+          }, 45);
+        }
+
+        updateLoader(0);
+
+        startLoader();
+      })();
+    </script>
   </body>
 </html>
